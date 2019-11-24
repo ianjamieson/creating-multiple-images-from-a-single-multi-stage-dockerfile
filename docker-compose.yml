@@ -1,0 +1,26 @@
+version: "3.4"
+services:
+
+  server-1:
+    build:
+      context: .
+      target: server1
+    container_name: built-server1
+    ports:
+      - "3201:80"
+
+  server-2:
+    build:
+      context: .
+      target: server2
+    container_name: built-server2
+    ports:
+      - "3202:80"
+
+  server-3:
+    build:
+      context: .
+      target: server3
+    container_name: built-server3
+    ports:
+    - "3203:80"
